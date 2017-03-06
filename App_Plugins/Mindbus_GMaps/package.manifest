@@ -1,0 +1,38 @@
+﻿{   
+    //you can define multiple editors   
+    propertyEditors: [      
+        {
+            /*this must be a unique alias*/ 
+            alias: "Mindbus.GMaps",
+            /*the name*/
+            name: "Mindbus Google Maps",
+            /*the html file we will load for the editor*/
+            editor: {
+                view: "~/App_Plugins/Mindbus_GMaps/GMapsPropertyEditor.html"
+            }    
+			,
+			prevalues: {
+				fields: [
+						{
+							label: "API Key",
+							description: "Google API Key",
+							key: "googleApiKey",
+							view: "textstring"
+						},
+						{
+							label: "Coordinates",
+							description: "Starting point in (lat,long), example: 52.1765214,5.1221573",
+							key: "startingPoint",
+							view: "textstring"
+						}
+					]
+			}
+        }
+    ]
+
+	,
+    //array of files we want to inject into the application on app_start
+    javascript: [
+        '~/App_Plugins/Mindbus_GMaps/GMapsPropertyEditor.controller.js'
+    ]
+}

@@ -1,0 +1,20 @@
+﻿{
+  "propertyEditors": [
+    {
+      "alias": "Mindbus.Testimonials",
+      "name": "Mindbus Testimonials",
+      "icon": "icon-quote",
+      "group": "Mindbus",
+      "editor": {
+        "view": "~/App_Plugins/Mindbus_Testimonials/mindbusTestimonials.html",
+        "valueType": "TEXT"
+      }
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/Mindbus_Testimonials/mindbus.testimonials.controller.js"
+  ],
+  "css": [
+    "~/App_Plugins/Mindbus_Testimonials/mindbustestimonials.css"
+  ]
+}

@@ -1,0 +1,12 @@
+﻿<div id="mb-testimonials" ng-controller="Mindbus.TestimonialsController">
+    <ul>
+        <li ng-repeat="testimonial in model.value">
+            <label for="quote{{$index}}">Quote</label>
+            <textarea ng-model="testimonial.quote" name="quote{{$index}}"></textarea>
+            <label for="author{{$index}}">Author</label>
+            <input type="text" ng-model="testimonial.author" name="author{{$index}}"/>
+            <span class="btn" ng-hide="!testimonial.quote || !testimonial.author" ng-click="removeItem($index)"><i class="icon icon-trash"></i></span>
+        </li>
+    </ul>
+    <span class="btn" ng-click="addItem()"><i class="icon icon-add"></i> Add Testimonial</span>
+</div>

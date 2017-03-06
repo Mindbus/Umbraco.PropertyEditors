@@ -1,0 +1,20 @@
+﻿{
+  "propertyEditors": [
+    {
+      "alias": "Mindbus.SlideShow",
+      "name": "Mindbus Slide Show",
+      "icon": "icon-slideshow",
+      "group": "Mindbus",
+      "editor": {
+        "view": "~/App_Plugins/Mindbus_SlideShow/mindbusSlideShow.html",
+        "valueType": "TEXT"
+      }
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/Mindbus_SlideShow/mindbus.slideshow.controller.js"
+  ],
+  "css": [
+    "~/App_Plugins/Mindbus_SlideShow/mindbusslideshow.css"
+  ]
+}

@@ -1,0 +1,44 @@
+﻿<div id="mb-slideshow" ng-controller="Mindbus.SlideShowController">
+
+    <ul>
+        <li ng-repeat="slide in slideList.slides">
+            <div class="content">
+                <div class="media-image umb-mediapicker">
+                    <a class="add-link" ng-click="selectMedia($event, slide)" ng-init="getMediaPath(slide)">
+                        <img ng-src="{{slide.mediaPath}}" />
+                        <i ng-hide="slide.mediaPath" class="icon icon-add large"></i>
+                    </a>
+                </div>
+                <div class="media-details">
+                    <div class="form-control form-inline">
+                        <label for="title{{$index}}">Title</label>
+                        <input type="text" ng-model="slide.title" name="title{{$index}}"/>
+                    </div>
+                    <div class="form-control form-inline">
+                        <label for="subTitle{{$index}}">Sub Title</label>
+                        <input type="text" ng-model="slide.subTitle" name="subTitle{{$index}}"/>
+                    </div>
+                    <div class="form-control form-inline">
+                        <label for="description{{$index}}">Description</label>
+                        <textarea ng-model="slide.description" name="description{{$index}}"></textarea>
+                    </div>
+                    <div class="form-control form-inline">
+                        <label for="buttonlabel{{$index}}">Button Label</label>
+                        <input type="text" ng-model="slide.buttonLabel" name="buttonlabel{{$index}}" />
+                    </div>
+                    <div class="form-control form-inline">
+                        <label for="link{{$index}}">Button Url</label>
+                        <input type="text" ng-model="slide.link" name="link{{$index}}"/>
+                        <span class="node btn" ng-click="selectNode(slide)"><i class="icon icon-link"></i></span>
+                    </div>
+                    <div class="form-control form-inline">
+                        <label for="openInNewWindow{{$index}}">New Window</label>
+                        <input type="checkbox" ng-model="slide.openInNewWindow" name="openInNewWindow{{$index}}"/>
+                    </div>
+                </div>
+            </div>
+            <span class="trash btn" ng-hide="!isSlideValid(slide)" ng-click="removeItem($index)"><i class="icon icon-trash"></i></span>
+        </li>
+    </ul>
+    <span class="btn" ng-click="addItem()"><i class="icon icon-add"></i> Add Slide</span>
+</div>
