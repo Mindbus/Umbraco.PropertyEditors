@@ -1,0 +1,30 @@
+﻿<div id="mb-testimonials" ng-controller="Mindbus.PriceIntervalController">
+    <table class="table table-bordered" ng-if="model.value.length > 0">
+        <thead>
+            <tr>
+                <th>Price</th>
+                <th>Begin Date</th>
+                <th>End Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="priceInterval in model.value">
+                <td>
+                    <input type="text" class="input-small" ng-model="priceInterval.price" required name="price{{$index}}" />
+                </td>
+                <td>
+                    <umb-editor model="priceInterval.beginDate"></umb-editor>
+                </td>
+                <td>
+                    <umb-editor model="priceInterval.endDate"></umb-editor>
+                </td>
+                <td>
+                    <span class="btn" ng-click="removeItem($index)"><i class="icon icon-delete"></i></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <span class="btn" ng-click="addItem()"><i class="icon icon-add"></i> Add</span>
+</div>

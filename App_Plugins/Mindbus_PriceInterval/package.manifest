@@ -1,0 +1,17 @@
+﻿{
+  "propertyEditors": [
+    {
+      "alias": "Mindbus.PriceInterval",
+      "name": "Mindbus Price Interval",
+      "icon": "icon-quote",
+      "group": "Mindbus",
+      "editor": {
+        "view": "~/App_Plugins/Mindbus_PriceInterval/mindbusPriceinterval.html",
+        "valueType": "TEXT"
+      }
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/Mindbus_PriceInterval/mindbus.priceinterval.controller.js"
+  ]
+}
